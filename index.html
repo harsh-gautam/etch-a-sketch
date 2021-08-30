@@ -5,13 +5,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Etch-a-Sketch</title>
+  <script defer src="js/index.js"></script>
 </head>
 <body>
   <header id="header">
     <h1>Etch-a-Sketch</h1>
   </header>
   <main id="container">
-    <div class="options"></div>
+    <div class="options">
+      <div class="slidecontainer">
+        <input type="range" min="8" max="100" value="16" class="slider" id="grid-size-slider">
+        <p class="slider-value"></p>
+      </div>
+    </div>
     <div class="canvas"></div>
   </main>
   <footer id="footer"></footer>
