@@ -1,0 +1,21 @@
+.canvas{
+  width: 600px;
+  height: 600px;
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.canvas-row{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.grid-cell{
+  width: 1%;
+  padding-bottom: 0%;
+  flex-grow: 1;
+  border: 1px solid black;
+}
