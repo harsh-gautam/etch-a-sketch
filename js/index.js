@@ -1,5 +1,6 @@
 const sliderValue = document.querySelector('.slider-value')
 const slider = document.querySelector('#grid-size-slider')
+
 sliderValue.innerText = slider.value;
 createGrid(slider.value);
 
@@ -17,7 +18,7 @@ function createGrid(gridSize) {
     for(let j = 0; j< gridSize; j++){
       let div = document.createElement("div")
       div.className = ["grid-cell"];
-      div.addEventListener("mousemove", changeCellColor)
+      div.addEventListener("mouseenter", changeCellColor)
       div.style.backgroundColor = "rgba(255, 255 ,255, 1 )";
       rowDiv.appendChild(div);
     }
@@ -26,7 +27,47 @@ function createGrid(gridSize) {
 }
 
 function changeCellColor(e){
-  e.target.style.backgroundColor = "rgb(0,0,0)"
+  if(colorMode === 'rgb'){
+    currentColor = chooseRandomColor();
+  }
+  e.target.style.backgroundColor = currentColor;
+}
+
+
+let colorMode = "black";
+let currentColor = "black"
+
+const colorModeChooser = document.querySelectorAll('.color-mode-chooser');
+
+colorModeChooser.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    if(e.target.name === "black"){
+      colorMode = "black";
+      currentColor = "#000";
+    } else if(e.target.name === "gray"){
+      colorMode = "gray";
+      currentColor = "rgb(125, 125, 125)"
+    } else if(e.target.name === "color") {
+      colorMode = "userColor";
+      console.log(e)
+    } else {
+      colorMode = "rgb";
+      currentColor = chooseRandomColor();
+    }
+  });
+});
+
+const colorPicker = document.querySelector("#favcolor")
+colorPicker.addEventListener("change", (e) => {
+  colorMode = "userColor"
+  currentColor = e.target.value
+})
+
+function chooseRandomColor(){
+  let r = Math.floor(Math.random() * 255);
+  let g = Math.floor(Math.random() * 255);
+  let b = Math.floor(Math.random() * 255);
+  return `rgb(${r}, ${g}, ${b})`;
 }
 
 function resetGrid(){
