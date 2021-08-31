@@ -10,8 +10,9 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
+  font-style: italic;
   /* border: 1px solid black; */
-  color: white;
+  color: rgb(224, 224, 224);
 }
 
 #container{
@@ -65,7 +66,7 @@ body {
   width: 180px;
   background-color: rgb(30, 30, 30);
   color: rgb(214, 214, 214);
-  border: 1px solid white;
+  border: 1px solid rgb(214,214,214);
 }
 
 .options > button:hover{
@@ -79,11 +80,17 @@ body {
   color: rgb(30,30,30);
 }
 
+.slider-value{
+  color:rgb(214, 214, 214);
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
 label{
   margin: 10px 0;
   font-size: 1rem;
   font-weight: bold;
-  color: #fff;
+  color: rgb(214, 214, 214);
 }
 
 .slidecontainer{
