@@ -1,11 +1,11 @@
 const sliderValue = document.querySelector('.slider-value')
 const slider = document.querySelector('#grid-size-slider')
 
-sliderValue.innerText = slider.value;
+sliderValue.innerText = `${slider.value} x ${slider.value}`;
 createGrid(slider.value);
 
 slider.addEventListener('input', (e) => {
-  sliderValue.innerText = e.target.value;
+  sliderValue.innerText = `${e.target.value} x ${e.target.value}`;
   createGrid(e.target.value)
 })
 
