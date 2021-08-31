@@ -35,7 +35,6 @@ function changeCellColor(e){
     let c = parseInt(cellColor.slice(4,7)) - 20;
     if(c < 50) c = 50;
     currentColor = `rgb(${c}, ${c}, ${c})`;
-    console.log(currentColor)
   }
   e.target.style.backgroundColor = currentColor;
 }
@@ -88,5 +87,5 @@ function chooseRandomColor(){
 }
 
 function resetGrid(){
-  createGrid(sliderValue.innerText)
+  createGrid(sliderValue.innerText.slice(0,2))
 }
