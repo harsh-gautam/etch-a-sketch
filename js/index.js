@@ -17,9 +17,14 @@ function createGrid(gridSize) {
     for(let j = 0; j< gridSize; j++){
       let div = document.createElement("div")
       div.className = ["grid-cell"];
+      div.addEventListener("mouseenter", changeCellColor)
       div.style.backgroundColor = "rgba(120, 0 ,0, 0.4 )";
       rowDiv.appendChild(div);
     }
     canvas.appendChild(rowDiv);
   }
+}
+
+function changeCellColor(e){
+  e.target.style.backgroundColor = "rgb(0,0,0)"
 }
