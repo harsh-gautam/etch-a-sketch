@@ -59,7 +59,7 @@ body {
   background-color: rgb(30, 30, 30);
 }
 
-.options > button {
+.color-mode-chooser {
   padding: 10px;
   font-size: 1rem;
   text-transform: uppercase;
@@ -69,7 +69,7 @@ body {
   border: 1px solid rgb(214,214,214);
 }
 
-.options > button:hover{
+.color-mode-chooser:hover{
   background-color: rgb(214,214,214);
   cursor:pointer;
   color: rgb(30,30,30)

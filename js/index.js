@@ -51,21 +51,31 @@ colorModeChooser.forEach((button) => {
     if(e.target.name === "gray"){
       colorMode = "gray";
       currentColor = "rgb(215, 215, 215)";
+      removeActiveClass(e.target.name);
       e.target.classList.add('active');
     } else if(e.target.name === "eraser") {
       colorMode = "eraser";
       currentColor = "rgb(255, 255, 255)"
+      removeActiveClass(e.target.name);
       e.target.classList.add('active');
     } else if (e.target.name === "rgb"){
       colorMode = "rgb";
       currentColor = chooseRandomColor();
+      removeActiveClass(e.target.name); 
       e.target.classList.add('active');
     }
   });
 });
 
+function removeActiveClass(name){
+  colorModeChooser.forEach((button) => {
+    if(button.name !== name){button.classList.remove('active')}
+  })
+}
+
 const colorPicker = document.querySelector("#favcolor")
 colorPicker.addEventListener("change", (e) => {
+  removeActiveClass(e.target.name)
   colorMode = "userColor"
   currentColor = e.target.value
 })
