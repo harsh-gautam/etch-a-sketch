@@ -54,9 +54,9 @@ colorModeChooser.forEach((button) => {
     } else if(e.target.name === "gray"){
       colorMode = "gray";
       currentColor = "rgb(215, 215, 215)"
-    } else if(e.target.name === "color") {
-      colorMode = "userColor";
-      console.log(e)
+    } else if(e.target.name === "eraser") {
+      colorMode = "eraser";
+      currentColor = "rgb(255, 255, 255)"
     } else {
       colorMode = "rgb";
       currentColor = chooseRandomColor();
