@@ -48,18 +48,18 @@ const colorModeChooser = document.querySelectorAll('.color-mode-chooser');
 
 colorModeChooser.forEach((button) => {
   button.addEventListener("click", (e) => {
-    if(e.target.name === "black"){
-      colorMode = "black";
-      currentColor = "#000";
-    } else if(e.target.name === "gray"){
+    if(e.target.name === "gray"){
       colorMode = "gray";
-      currentColor = "rgb(215, 215, 215)"
+      currentColor = "rgb(215, 215, 215)";
+      e.target.classList.add('active');
     } else if(e.target.name === "eraser") {
       colorMode = "eraser";
       currentColor = "rgb(255, 255, 255)"
-    } else {
+      e.target.classList.add('active');
+    } else if (e.target.name === "rgb"){
       colorMode = "rgb";
       currentColor = chooseRandomColor();
+      e.target.classList.add('active');
     }
   });
 });
