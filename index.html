@@ -18,6 +18,11 @@
         <input type="range" min="2" max="64" value="16" class="slider" id="grid-size-slider">
         <p class="slider-value"></p>
       </div>
+      <button id="black" value="black">Black</button>
+      <button id="grayscale" value="gray">Grayscale</button>
+      <button id="rgb" value="rgb">RGB</button>
+      <input type="color" id='favcolor' name="color" value="#000">
+      <button id="reset" onclick="resetGrid()">Reset</button>
     </div>
     <div class="canvas"></div>
   </main>

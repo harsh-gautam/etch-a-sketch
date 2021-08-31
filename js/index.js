@@ -17,8 +17,8 @@ function createGrid(gridSize) {
     for(let j = 0; j< gridSize; j++){
       let div = document.createElement("div")
       div.className = ["grid-cell"];
-      div.addEventListener("mouseenter", changeCellColor)
-      div.style.backgroundColor = "rgba(120, 0 ,0, 0.4 )";
+      div.addEventListener("mousemove", changeCellColor)
+      div.style.backgroundColor = "rgba(255, 255 ,255, 1 )";
       rowDiv.appendChild(div);
     }
     canvas.appendChild(rowDiv);
@@ -27,4 +27,8 @@ function createGrid(gridSize) {
 
 function changeCellColor(e){
   e.target.style.backgroundColor = "rgb(0,0,0)"
+}
+
+function resetGrid(){
+  createGrid(sliderValue.innerText)
 }
