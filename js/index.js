@@ -19,7 +19,7 @@ function createGrid(gridSize) {
       let div = document.createElement("div")
       div.className = ["grid-cell"];
       div.addEventListener("mouseenter", changeCellColor)
-      div.style.backgroundColor = "rgba(255, 255 ,255, 1 )";
+      div.style.backgroundColor = "rgb(255, 255, 255)";
       rowDiv.appendChild(div);
     }
     canvas.appendChild(rowDiv);
@@ -29,6 +29,13 @@ function createGrid(gridSize) {
 function changeCellColor(e){
   if(colorMode === 'rgb'){
     currentColor = chooseRandomColor();
+  }
+  if(colorMode === 'gray'){
+    let cellColor = e.target.style.backgroundColor;
+    let c = parseInt(cellColor.slice(4,7)) - 20;
+    if(c < 50) c = 50;
+    currentColor = `rgb(${c}, ${c}, ${c})`;
+    console.log(currentColor)
   }
   e.target.style.backgroundColor = currentColor;
 }
@@ -46,7 +53,7 @@ colorModeChooser.forEach((button) => {
       currentColor = "#000";
     } else if(e.target.name === "gray"){
       colorMode = "gray";
-      currentColor = "rgb(125, 125, 125)"
+      currentColor = "rgb(215, 215, 215)"
     } else if(e.target.name === "color") {
       colorMode = "userColor";
       console.log(e)
