@@ -124,6 +124,23 @@ label{
 }
 
 #footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   height: 10vh;
   border: 1px solid black;
+}
+
+#footer > p {
+  color: rgb(224, 224, 224)
+}
+
+#footer > p > a{
+  text-decoration: none;
+  color: rgb(224, 224, 224);
+}
+#footer > p > a:hover{
+  text-decoration: underline;
+  color: rgb(48, 107, 245);
 }
