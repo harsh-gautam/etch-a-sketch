@@ -15,10 +15,14 @@
   <main id="container">
     <div class="options">
       <div class="slidecontainer">
+        <label for="grid-size-slider">Select grid size:</label>
         <input type="range" min="2" max="64" value="16" class="slider" id="grid-size-slider">
         <p class="slider-value"></p>
       </div>
-      <input class="color-mode-chooser" type="color" id='favcolor' name="color">
+      <div class="color-picker">
+        <label for="favcolor">Select your favorite color:</label>
+        <input class="color-mode-chooser" type="color" id='favcolor' name="color">
+      </div>
       <button class="color-mode-chooser" id="grayscale" name="gray">Grayscale</button>
       <button class="color-mode-chooser" id="rgb" name="rgb">RGB</button>
       <button class="color-mode-chooser" id="eraser" name="eraser">Eraser</button>
