@@ -1,29 +1,37 @@
+body {
+  background-color: rgb(20,20,20);
+  margin: 0;
+  font-family: 'Sacramento', cursive;
+}
+
+#header{
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  /* border: 1px solid black; */
+  color: white;
+}
+
 #container{
+  height: 70vh;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-}
-
-.options{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  border: 1px solid gray;
-  border-radius: 10px;
-  padding: 10px 55px;
+  /* border: 1px solid black; */
 }
 
 .canvas{
-  width: 600px;
-  height: 600px;
+  width: 500px;
+  /* height: 500px; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   padding: 0;
   border: 0.1rem solid rgb(0 0 0 / 25%);
   border-radius: 3px;
-  box-shadow: 0px 0px 35px 5px rgb(0 0 0 / 50%);
+  box-shadow: 0px 0px 35px 5px rgb(255 255 255 / 20%);
 }
 
 .canvas-row{
@@ -37,4 +45,78 @@
   padding-bottom: 0%;
   flex-grow: 1;
   /* border: 1px solid black; */
+}
+
+.options{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid rgb(30,30,30);
+  border-radius: 10px;
+  padding: 10px 55px;
+  background-color: rgb(30, 30, 30);
+}
+
+.options > button {
+  padding: 10px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  width: 180px;
+  background-color: rgb(30, 30, 30);
+  color: rgb(214, 214, 214);
+  border: 1px solid white;
+}
+
+.options > button:hover{
+  background-color: rgb(214,214,214);
+  cursor:pointer;
+  color: rgb(30,30,30)
+}
+
+.active {
+  background-color: rgb(214,214,214);
+  color: rgb(30,30,30);
+}
+
+label{
+  margin: 10px 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.slidecontainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider{
+  width: 180px;
+}
+
+.color-picker{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#favcolor {
+  background-color: white;
+  width: 180px;
+  border: 0;
+  padding: 0;
+  height: 50px;
+}
+
+#favcolor:hover{
+  cursor: pointer;
+}
+
+#footer {
+  height: 10vh;
+  border: 1px solid black;
 }
